@@ -1,0 +1,69 @@
+<div class="product-wrapper">
+
+  <div class="products-title">
+    GAMES LIST
+  </div>
+
+  <div class="products-container">
+
+    <div
+      class="product-card"
+      *ngFor="let product of products"
+      (click)="openModal(product)"
+    >
+
+      <img
+        [src]="product.image"
+        [alt]="product.name"
+      >
+
+      <h2>{{ product.name }}</h2>
+
+    </div>
+
+  </div>
+  <div
+    class="modal-overlay"
+    *ngIf="selectedProduct"
+    (click)="closeModal()"
+  >
+
+    <div
+      class="modal-content"
+      (click)="$event.stopPropagation()"
+    >
+
+      <h2>{{ selectedProduct.name }}</h2>
+
+      <img
+        [src]="selectedProduct.image"
+        [alt]="selectedProduct.name"
+      >
+
+      <div class="download-buttons">
+
+        <a
+          *ngFor="let download of selectedProduct.downloads"
+          [href]="download.url"
+          target="_blank"
+          class="download-btn"
+        >
+          {{ download.name }}
+        </a>
+
+      </div>
+
+      <button
+        class="close-btn"
+        (click)="closeModal()"
+      >
+        Close
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+  

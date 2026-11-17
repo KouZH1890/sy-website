@@ -1,0 +1,30 @@
+<div class="feed-container">
+
+  <div class="feed-title">
+
+    <span class="live-dot"></span>
+
+    LIVE ACTIVITY
+
+  </div>
+
+  <div
+    class="feed-item"
+    *ngFor="let item of feedHistory"
+  >
+
+    <span class="feed-name">
+      {{ item.name }}
+    </span>
+
+    <span class="feed-action">
+      {{ item.action }}
+    </span>
+
+    <span class="feed-time">
+      {{ item.time }}
+    </span>
+
+  </div>
+
+</div>

@@ -1,0 +1,102 @@
+.counter-wrapper {
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  background-image: url('/images/counter_background.jpg');
+  background-size: cover;
+  background-position: center;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+}
+
+.counter-title {
+
+  margin-bottom: 20px;
+
+  color: gold;
+
+  font-size: 42px;
+
+  font-weight: bold;
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 10px gold,
+    0 0 20px rgb(255, 0, 183);
+
+  -webkit-text-stroke:
+    2px rgba(0, 0, 0, 0);
+
+}
+
+.counter-container {
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  border: 20px ridge gold;
+  border-radius: 12px;
+
+}
+
+.digit-box {
+
+  width: 60px;
+  height: 80px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      #d9d9d9
+    );
+
+  color: black;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-size: 48px;
+  font-weight: bold;
+
+  border:
+    2px solid #a80000;
+
+  box-shadow:
+    0 6px 12px rgba(0,0,0,0.35),
+    inset 0 2px 4px rgba(255,255,255,0.8),
+    inset 0 -3px 6px rgba(0,0,0,0.2);
+
+}
+
+.digit {
+
+  animation: scrollUp 0.5s ease;
+
+}
+
+@keyframes scrollUp {
+
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+}

@@ -1,0 +1,38 @@
+<div class="ranking-wrapper">
+
+  <div class="ranking-title">
+    Congrtulations to Our Top Winners!
+  </div>
+
+  <div class="ranking-container">
+
+    <div
+      class="card"
+      *ngFor="let winner of winners"
+      [class.first]="winner.rank === 1"
+      [class.second]="winner.rank === 2"
+      [class.third]="winner.rank === 3"
+    >
+
+      <div class="medal">
+
+        <span *ngIf="winner.rank === 1">🥇</span>
+        <span *ngIf="winner.rank === 2">🥈</span>
+        <span *ngIf="winner.rank === 3">🥉</span>
+
+      </div>
+
+      <h2>{{ winner.name }}</h2>
+
+      <p>{{ winner.score }}</p>
+
+      <div class="rank-number">
+        #{{ winner.rank }}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+  
